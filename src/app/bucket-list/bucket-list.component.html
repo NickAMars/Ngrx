@@ -1,0 +1,4 @@
+<p>bucket-list works!</p>
+<ul>
+    <li (click)="removeItem(name)" *ngFor = "let name of names$ | async"> {{name }}</li>
+</ul>

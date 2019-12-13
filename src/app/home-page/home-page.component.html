@@ -1,0 +1,18 @@
+<p>home-page works!</p>
+
+
+<!--
+  Ok so home page is going to have a drop down
+  which keeps adding a element on the list.
+ -->
+
+<div class="contrainer">
+    <div class="addfield">Add feild   </div>
+    <button (click) ="addToList()" class="add">Add</button>
+    <input type="text" [(ngModel)]="name">
+    <ul class="list">
+        <li *ngFor="let item of listItems;">
+                {{item}}
+        </li>
+    </ul>
+</div>
