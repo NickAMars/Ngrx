@@ -11,8 +11,12 @@
     <button (click) ="addToList()" class="add">Add</button>
     <input type="text" [(ngModel)]="name">
     <ul class="list">
-        <li *ngFor="let item of listItems;">
+        <!-- <li *ngFor="let item of listItems;">
                 {{item}}
-        </li>
+        </li> -->
+
+        <ul>
+            <li (click)="removeItem(name)" *ngFor = "let name of names$ | async"> {{name }}</li>
+        </ul>
     </ul>
 </div>

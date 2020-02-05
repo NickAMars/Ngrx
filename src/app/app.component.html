@@ -1,9 +1,14 @@
 
 
 
-<h1>Testing The ngRX store for leture purposes</h1>
+<h1> ngRX store for leture purposes</h1>
+<!-- <div *ngIf="!getToken()">
+<a routerLink ="">Login</a>
+</div> -->
 
-<a routerLink ="">Home</a>
-<a routerLink ="places" style= "margin: 20px">Place</a>
-
+<div *ngIf="getToken()">
+    <a routerLink ="home" style= "margin: 20px">Home</a>
+  <a routerLink ="places" style= "margin: 20px">Place</a>
+<a (click)="logout()" style="margin: 20px; color:red; font-weight: 900 ">logout</a>
+</div>
 <router-outlet> </router-outlet>

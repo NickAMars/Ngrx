@@ -1,4 +1,13 @@
 <p>bucket-list works!</p>
-<ul>
+<!-- <ul>
     <li (click)="removeItem(name)" *ngFor = "let name of names$ | async"> {{name }}</li>
+</ul> -->
+
+
+
+<!-- <button (click) ="addToList()" class="add">MarketItem</button> -->
+<ul>
+  <li> name - cost - quantity </li>
+    <li (click)="removeItem(item.name)" *ngFor = "let item of market$ | async">
+      {{item.name}} - {{item.cost}} - {{item.quantity}}</li>
 </ul>
